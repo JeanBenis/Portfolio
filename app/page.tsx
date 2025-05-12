@@ -23,7 +23,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="mb-8 max-w-2xl text-lg text-blue-100 sm:text-xl md:text-2xl">
-            Développeur Web Freelance spécialisé en création d&apos;expériences web modernes et performantes
+            Ingénieur Freelance spécialisé en création d&apos;expériences web modernes et performantes
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-white text-purple-900 hover:bg-purple-100">
@@ -70,9 +70,9 @@ export default function Home() {
             <div className="md:w-1/2">
               <h3 className="mb-4 text-2xl font-semibold text-blue-600">Qui suis-je?</h3>
               <p className="mb-6 text-lg text-gray-700">
-                Je suis un développeur web passionné avec une expertise dans la création de sites web et
+                Je suis un ingénieur passionné avec une expertise dans la création de sites web et
                 d&apos;applications modernes. Avec plusieurs années d&apos;expérience, j&apos;ai travaillé sur divers projets
-                allant des sites vitrines aux applications web complexes.
+                allant des sites vitrines aux applications complexes.
               </p>
               <p className="mb-6 text-lg text-gray-700">
                 Ma philosophie est de créer des expériences numériques qui allient esthétique et fonctionnalité, tout en
@@ -148,50 +148,18 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <ProjectCard
-              title="E-commerce de Mode"
-              description="Site e-commerce complet avec panier, paiement et gestion des commandes."
-              image="/placeholder.svg?height=400&width=600"
-              tags={["Next.js", "Stripe", "Tailwind CSS"]}
-              demoUrl="#"
+              title="Data Ille et Vilaine"
+              description="Site d'Open data du département d'Ille et Vilaine. Ce site permet a chaque citoyen d'acceder a des données publiques administrées par le département."
+              image="/data-ille-et-vilaine.png?height=400&width=600"
+              tags={["CKAN", "Html", "CSS", "BDD"]}
+              demoUrl="https://data.ille-et-vilaine.fr/"
               codeUrl="#"
             />
             <ProjectCard
-              title="Application de Gestion"
-              description="Dashboard administratif pour une entreprise de logistique."
-              image="/placeholder.svg?height=400&width=600"
-              tags={["React", "Node.js", "MongoDB"]}
-              demoUrl="#"
-              codeUrl="#"
-            />
-            <ProjectCard
-              title="Site Vitrine Immobilier"
-              description="Site vitrine moderne pour une agence immobilière avec recherche de biens."
-              image="/placeholder.svg?height=400&width=600"
-              tags={["Vue.js", "Firebase", "GSAP"]}
-              demoUrl="#"
-              codeUrl="#"
-            />
-            <ProjectCard
-              title="Application Mobile Fitness"
-              description="Application de suivi d'entraînement et de nutrition avec React Native."
-              image="/placeholder.svg?height=400&width=600"
-              tags={["React Native", "Redux", "Firebase"]}
-              demoUrl="#"
-              codeUrl="#"
-            />
-            <ProjectCard
-              title="Plateforme Éducative"
-              description="LMS complet avec cours en ligne, quiz et suivi de progression."
-              image="/placeholder.svg?height=400&width=600"
-              tags={["Next.js", "PostgreSQL", "Auth.js"]}
-              demoUrl="#"
-              codeUrl="#"
-            />
-            <ProjectCard
-              title="Blog Tech"
-              description="Blog personnel avec système de gestion de contenu personnalisé."
-              image="/placeholder.svg?height=400&width=600"
-              tags={["Gatsby", "GraphQL", "Netlify CMS"]}
+              title="Jean Bénis"
+              description="Mon site de présentation de mon activité de freelance."
+              image="/portfolio.png?height=400&width=600"
+              tags={["React", "Next.js", "Html", "CSS"]}
               demoUrl="#"
               codeUrl="#"
             />
@@ -199,7 +167,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Témoignages Section */}
+      {/* Témoignages Section hidden*/}
       <section className="bg-blue-900 py-20 text-white hidden">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
@@ -328,7 +296,7 @@ export default function Home() {
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
             <div>
               <h3 className="text-xl font-bold">Jean Bénis</h3>
-              <p className="text-gray-400">Développeur Web Freelance</p>
+              <p className="text-gray-400">Ingénieur Web Freelance</p>
             </div>
             <div className="flex space-x-4">
               <a // Linkedin

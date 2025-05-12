@@ -1,11 +1,11 @@
 import { ArrowDown } from "lucide-react"
-import Link from "next/link"
 import Image from "next/image"
 import ProjectCard from "@/components/project-card"
 import SkillCard from "@/components/skill-card"
 import ContactForm from "@/components/contact-form"
 import { Button } from "@/components/ui/button"
 import HeroAnimation from "@/components/hero-animation"
+import { Link } from "@/components/link"
 
 export default function Home() {
   return (
@@ -59,7 +59,7 @@ export default function Home() {
             <div className="md:w-1/2">
               <div className="relative h-80 w-80 overflow-hidden rounded-full border-4 border-blue-200 shadow-xl">
                 <Image
-                  src="/placeholder.svg?height=320&width=320"
+                  src="/photo-profil.jpg?height=320&width=320"
                   alt="Votre photo"
                   fill
                   className="object-cover"
@@ -71,7 +71,7 @@ export default function Home() {
               <h3 className="mb-4 text-2xl font-semibold text-blue-600">Qui suis-je?</h3>
               <p className="mb-6 text-lg text-gray-700">
                 Je suis un développeur web passionné avec une expertise dans la création de sites web et
-                d&apos;applications modernes. Avec [X] années d&apos;expérience, j&apos;ai travaillé sur divers projets
+                d&apos;applications modernes. Avec plusieurs années d&apos;expérience, j&apos;ai travaillé sur divers projets
                 allant des sites vitrines aux applications web complexes.
               </p>
               <p className="mb-6 text-lg text-gray-700">
@@ -200,7 +200,7 @@ export default function Home() {
       </section>
 
       {/* Témoignages Section */}
-      <section className="bg-blue-900 py-20 text-white">
+      <section className="bg-blue-900 py-20 text-white hidden">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Ce que disent <span className="text-blue-200">mes clients</span>
@@ -237,7 +237,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Me <span className="text-blue-600">Contacter</span>

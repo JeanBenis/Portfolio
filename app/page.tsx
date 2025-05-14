@@ -1,4 +1,4 @@
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, Code, Database, Cpu, LineChart, BrainCircuit, Layers } from "lucide-react"
 import Image from "next/image"
 import ProjectCard from "@/components/project-card"
 import SkillCard from "@/components/skill-card"
@@ -6,6 +6,8 @@ import ContactForm from "@/components/contact-form"
 import { Button } from "@/components/ui/button"
 import HeroAnimation from "@/components/hero-animation"
 import { Link } from "@/components/link"
+import EducationCard from "@/components/education-card"
+
 
 export default function Home() {
   return (
@@ -23,7 +25,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="mb-8 max-w-2xl text-lg text-blue-100 sm:text-xl md:text-2xl">
-            Ingénieur Freelance spécialisé en création d&apos;expériences web modernes et performantes
+            Ingénieur & Développeur Web spécialisé en solutions techniques innovantes
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-white text-purple-900 hover:bg-purple-100">
@@ -59,7 +61,7 @@ export default function Home() {
             <div className="md:w-1/2">
               <div className="relative h-80 w-80 overflow-hidden rounded-full border-4 border-blue-200 shadow-xl">
                 <Image
-                  src="/photo-profil.jpg?height=320&width=320"
+                  src="/photo-profil.jpg?height=320&width=320" //Modif
                   alt="Votre photo"
                   fill
                   className="object-cover"
@@ -70,11 +72,17 @@ export default function Home() {
             <div className="md:w-1/2">
               <h3 className="mb-4 text-2xl font-semibold text-blue-600">Qui suis-je?</h3>
               <p className="mb-6 text-lg text-gray-700">
+                Diplômé en ingénierie, j'allie une solide formation technique à une expertise en développement web.
+                Cette double compétence me permet d'aborder les projets avec une approche analytique et structurée, tout
+                en créant des solutions numériques performantes et innovantes.
                 Je suis un ingénieur passionné avec une expertise dans la création de sites web et
                 d&apos;applications modernes. Avec plusieurs années d&apos;expérience, j&apos;ai travaillé sur divers projets
                 allant des sites vitrines aux applications complexes.
               </p>
               <p className="mb-6 text-lg text-gray-700">
+                Ma formation d'ingénieur m'a doté d'une méthodologie rigoureuse pour résoudre des problèmes complexes,
+                optimiser les performances et garantir la fiabilité des systèmes que je développe. Je m'appuie sur ces
+                fondamentaux pour créer des applications web robustes et évolutives.
                 Ma philosophie est de créer des expériences numériques qui allient esthétique et fonctionnalité, tout en
                 garantissant des performances optimales et une expérience utilisateur exceptionnelle.
               </p>
@@ -93,7 +101,113 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Compétences Section */}
+      {/* Formation Section */}
+      <section id="formation" className="bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Ma <span className="text-blue-600">Formation</span>
+          </h2>
+          <div className="mx-auto max-w-4xl">
+            <div className="space-y-8">
+              <EducationCard
+                degree="Diplôme d'Ingénieur"
+                school="ENIB : École Nationale d'Ingénieurs de Brest"
+                period="2016 - 2021"
+                description="Formation en informatique, électronique et mécatronique.
+                 Projets majeurs incluant la mise en place d'une station météo en groupe. 
+                 Mon apport personnel étant la création du site web renvoyant les informations de la station."
+                skills={[
+                  "Mathématiques appliquées",
+                  "Modélisation",
+                  "Gestion de projet",
+                  "Résolution de problèmes complexes",
+                ]}
+              />
+              <EducationCard
+                degree="Spécialisation en école d'Ingénieur"
+                school="ENIB : École Nationale d'Ingénieurs de Brest"
+                period="2021 - 2022"
+                description="Spécialisation en développement web et applications distribuées. 
+                Mémoire sur l'automatisation de la mise à jour des iPhones en 10 minutes via un PC."
+                skills={["Algorithmique avancé", "Architecture logicielle", "Bases de données", "Sécurité informatique"]}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Approche Section */}
+      <section className="bg-blue-900 py-20 text-white">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Mon <span className="text-blue-200">Approche d'Ingénieur</span>
+          </h2>
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-lg bg-white/10 p-6 backdrop-blur-sm">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-800">
+                <Layers className="h-8 w-8 text-blue-200" />
+              </div>
+              <h3 className="mb-3 text-xl font-bold">Architecture solide</h3>
+              <p>
+                Je conçois des architectures logicielles robustes et évolutives, en appliquant les principes SOLID et
+                les patterns de conception adaptés à chaque projet.
+              </p>
+            </div>
+            <div className="rounded-lg bg-white/10 p-6 backdrop-blur-sm">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-800">
+                <LineChart className="h-8 w-8 text-blue-200" />
+              </div>
+              <h3 className="mb-3 text-xl font-bold">Optimisation continue</h3>
+              <p>
+                J'analyse et optimise constamment les performances, en identifiant les goulots d'étranglement et en
+                implémentant des solutions efficaces.
+              </p>
+            </div>
+            <div className="rounded-lg bg-white/10 p-6 backdrop-blur-sm">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-800">
+                <Database className="h-8 w-8 text-blue-200" />
+              </div>
+              <h3 className="mb-3 text-xl font-bold">Gestion des données</h3>
+              <p>
+                Je conçois des modèles de données efficaces et sécurisés, en optimisant les requêtes et en assurant
+                l'intégrité des informations.
+              </p>
+            </div>
+            <div className="rounded-lg bg-white/10 p-6 backdrop-blur-sm">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-800">
+                <Cpu className="h-8 w-8 text-blue-200" />
+              </div>
+              <h3 className="mb-3 text-xl font-bold">Infrastructure scalable</h3>
+              <p>
+                Je développe des infrastructures cloud évolutives qui s'adaptent automatiquement à la charge et aux
+                besoins du projet.
+              </p>
+            </div>
+            <div className="rounded-lg bg-white/10 p-6 backdrop-blur-sm">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-800">
+                <Code className="h-8 w-8 text-blue-200" />
+              </div>
+              <h3 className="mb-3 text-xl font-bold">Code maintenable</h3>
+              <p>
+                J'écris un code propre, bien documenté et testé, facilitant la maintenance et l'évolution des projets
+                sur le long terme.
+              </p>
+            </div>
+            <div className="rounded-lg bg-white/10 p-6 backdrop-blur-sm">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-blue-800">
+                <BrainCircuit className="h-8 w-8 text-blue-200" />
+              </div>
+              <h3 className="mb-3 text-xl font-bold">Innovation technique</h3>
+              <p>
+                J'intègre les dernières avancées technologiques de manière pertinente pour créer des solutions
+                innovantes et efficaces.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            {/* Compétences Section */}
       <section id="competences" className="bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">

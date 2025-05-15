@@ -9,6 +9,7 @@ import { Link } from "@/components/link"
 import EducationCard from "@/components/education-card"
 import ExperienceCard from "@/components/experience-card"
 import ProcessTimeline from "@/components/process-timeline"
+import LanguageCard from "@/components/language-card"
 
 
 export default function Home() {
@@ -140,6 +141,37 @@ export default function Home() {
                   "Développement de site web"
                 ]}
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Langues Section */}
+      <section id="langues" className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Mes <span className="text-blue-600">Langues</span>
+          </h2>
+          <div className="mx-auto max-w-4xl">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <LanguageCard
+                language="Français"
+                level={5}
+                flag="🇫🇷"
+                description="Langue maternelle. Excellente maîtrise de la communication écrite et orale dans un contexte professionnel."
+              />
+              <LanguageCard
+                language="Anglais"
+                level={4}
+                flag="🇬🇧"
+                description="Communication professionnelle courante. Expérience de travail dans des environnements internationaux."
+              />
+            </div>
+            <div className="mt-10 text-center">
+              <p className="text-lg text-gray-700">
+                Ma maîtrise de plusieurs langues me permet de collaborer efficacement avec des clients et partenaires
+                internationaux, et de m'adapter à des environnements de travail multiculturels.
+              </p>
             </div>
           </div>
         </div>

@@ -156,69 +156,64 @@ export default function Home() {
                 position="Ingénieur Freelance"
                 company="Jean Bénis Freelance"
                 period="Mai 2025 - Présent"
-                description="Recherche et développement de solutions innovantes dans le domaine de l'IoT et des systèmes embarqués. Conception de prototypes et développement de preuves de concept pour des applications industrielles."
+                description="Après mes expérience professionelles et un voyage de plus de 6 mois à travers l'Asie, j'ai eu le recul nécessaire pour me lancer à mon compte. "
                 achievements={[
-                  "Conception d'un système IoT de surveillance industrielle déployé dans 12 usines",
-                  "Développement d'un algorithme de prédiction de maintenance qui a réduit les temps d'arrêt de 35%",
-                  "Publication de 2 articles techniques dans des revues spécialisées",
-                  "Obtention d'un brevet pour une méthode innovante de collecte et traitement de données IoT",
+                  "Création de la micro-entreprise",
+                  "Développement et hébergement du site",
+                  "Création des documents légaux",
+                  "Démarchage auprès de potentiels clients",
                 ]}
                 technologies={[
-                  "C++",
-                  "Python",
-                  "Embedded Systems",
-                  "IoT Protocols",
-                  "MQTT",
-                  "TensorFlow",
-                  "Edge Computing",
-                  "PCB Design",
+                  "React.js",
+                  "Next.js",
+                  "Html",
+                  "CSS",
+                  "JavaScript / TypeScript",
                 ]}
               />
               <ExperienceCard
-                position="Lead Developer & Architecte Technique"
+                position="Ingénieur développeur"
                 company="Cordon Electronics"
-                period="Janvier 2021 - Présent"
-                description="Direction technique d'une équipe de développeurs sur des projets d'envergure pour des clients industriels. Conception d'architectures logicielles évolutives et mise en place de méthodologies de développement agiles."
+                period="Janvier 2022 - Novembre 2023"
+                description="Développeur dans l'équipe applications mobiles de Cordon electronics. Deux volets à ce poste : 
+                la partie industrielle comprenant majoritairement la mise à jour des iPhone en réparation en moins de 10mn et la partie prestataire.
+                J'administrais et améliorais en continu l'outil de transfert des donées d'un mobile à un autre chez un des plus grands opérateur télécom francais."
                 achievements={[
-                  "Conception et implémentation d'une architecture microservices qui a réduit les temps de déploiement de 70%",
-                  "Mise en place d'une CI/CD pipeline complète qui a amélioré la qualité du code et réduit les bugs en production de 45%",
-                  "Direction d'une équipe de 8 développeurs sur un projet critique pour un client du secteur énergétique",
-                  "Optimisation des performances d'une application existante, réduisant les temps de chargement de 60%",
+                  "Conception et implémentation d'une solution de mise à jour des iPhone en un temps record",
+                  "Création d'un service windows couplé à une interface utilisateur permettant de télécharger automatique et manuellement les firmwares Apple",
+                  "Mise en place d'une CI/CD pipeline complète qui a amélioré la qualité du code et réduit les bugs en production",
+                  "Chef de projet sur un projet de plusieurs millions d'euros annuel pour un des leaders du télécom français",
+                  "Optimisation des performances d'une application, et d'un site existant",
                 ]}
                 technologies={[
-                  "React",
-                  "Node.js",
-                  "TypeScript",
-                  "Docker",
-                  "Kubernetes",
-                  "AWS",
-                  "MongoDB",
-                  "GraphQL",
+                  "C#",
+                  "Html",
+                  "CSS",
+                  "Angular",
+                  "Concepteur XAML",
+                  "Développement de service Windows",
+                  "Android",
+                  "iOS",
                   "CI/CD",
                 ]}
               />
 
               <ExperienceCard
-                position="Ingénieur Développement Full Stack"
-                company="DataSys Engineering"
-                period="2018 - 2021"
-                description="Conception et développement de solutions web pour l'analyse de données industrielles. Création d'interfaces utilisateur intuitives pour visualiser des données complexes et implémentation d'algorithmes d'optimisation."
+                position="Stage Ingénieur Développement Full Stack"
+                company="Département d'Ille et Vilaine"
+                period="Septembre 2020 - Janvier 2021"
+                description="Conception et développement du site Data Ille et Vilaine. Le premier site d'open data du département 35."
                 achievements={[
-                  "Développement d'un tableau de bord analytique temps réel utilisé par plus de 500 ingénieurs",
-                  "Implémentation d'algorithmes d'optimisation qui ont permis d'économiser 1.2M€ annuels en coûts opérationnels",
-                  "Création d'une API RESTful consommée par plusieurs applications internes et externes",
-                  "Mise en place d'une architecture de traitement de données capable de gérer 10TB de données quotidiennes",
+                  "Conception du site en accord avec les administrateurs du département",
+                  "Implémentation de CKAN pour gérer la partie open data",
+                  "Liaison à la base de données existante d'open data du département",
+                  "Mise en place d'un visuel attirant et réussi",
                 ]}
                 technologies={[
-                  "Python",
-                  "Django",
-                  "React",
-                  "PostgreSQL",
-                  "Redis",
-                  "AWS",
-                  "Docker",
-                  "Data Visualization",
-                  "Machine Learning",
+                  "CKAN",
+                  "Html",
+                  "CSS",
+                  "Javascript",
                 ]}
               />
             </div>

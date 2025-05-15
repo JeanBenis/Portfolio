@@ -8,6 +8,7 @@ import HeroAnimation from "@/components/hero-animation"
 import { Link } from "@/components/link"
 import EducationCard from "@/components/education-card"
 import ExperienceCard from "@/components/experience-card"
+import ProcessTimeline from "@/components/process-timeline"
 
 
 export default function Home() {
@@ -218,6 +219,20 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Méthodologie Section avec Timeline */}
+      <section id="methodologie" className="bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Ma <span className="text-blue-600">Méthodologie</span>
+          </h2>
+          <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-700">
+            Je suis une approche structurée et éprouvée pour développer des solutions web de qualité. Chaque étape est
+            essentielle pour garantir un produit final qui répond parfaitement à vos besoins.
+          </p>
+          <ProcessTimeline />
         </div>
       </section>
 

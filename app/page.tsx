@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import HeroAnimation from "@/components/hero-animation"
 import { Link } from "@/components/link"
 import EducationCard from "@/components/education-card"
+import ExperienceCard from "@/components/experience-card"
 
 
 export default function Home() {
@@ -88,9 +89,7 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-                  <Link href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-                    Télécharger mon CV
-                  </Link>
+                  <Link href="#approche">Mon approche</Link>
                 </Button>
                 <Button asChild className="bg-blue-600 hover:bg-blue-700">
                   <Link href="#competences">Mes compétences</Link>
@@ -115,12 +114,14 @@ export default function Home() {
                 period="2016 - 2021"
                 description="Formation en informatique, électronique et mécatronique.
                  Projets majeurs incluant la mise en place d'une station météo en groupe. 
-                 Mon apport personnel étant la création du site web renvoyant les informations de la station."
+                 Mon apport personnel étant la création du site web affichant les informations envoyées par la station."
                 skills={[
                   "Mathématiques appliquées",
+                  "Analyse des besoins",
                   "Modélisation",
                   "Gestion de projet",
                   "Résolution de problèmes complexes",
+                  "Languages de programation",
                 ]}
               />
               <EducationCard
@@ -128,8 +129,97 @@ export default function Home() {
                 school="ENIB : École Nationale d'Ingénieurs de Brest"
                 period="2021 - 2022"
                 description="Spécialisation en développement web et applications distribuées. 
-                Mémoire sur l'automatisation de la mise à jour des iPhones en 10 minutes via un PC."
-                skills={["Algorithmique avancé", "Architecture logicielle", "Bases de données", "Sécurité informatique"]}
+                Rapport de stage de fin d'études sur l'automatisation de la mise à jour des iPhones en 10 minutes via un PC."
+                skills={[
+                  "Algorithmique avancé",
+                  "Architecture logicielle",
+                  "Bases de données",
+                  "Sécurité informatique",
+                  "Développement de logiciel Windows",
+                  "Développement de site web"
+                ]}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Expériences Professionnelles Section */}  {/*Modif*/}
+      <section id="experiences" className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Mes <span className="text-blue-600">Expériences</span>
+          </h2>
+          <div className="mx-auto max-w-4xl">
+            <div className="space-y-8">
+              <ExperienceCard
+                position="Ingénieur Freelance"
+                company="Jean Bénis Freelance"
+                period="Mai 2025 - Présent"
+                description="Recherche et développement de solutions innovantes dans le domaine de l'IoT et des systèmes embarqués. Conception de prototypes et développement de preuves de concept pour des applications industrielles."
+                achievements={[
+                  "Conception d'un système IoT de surveillance industrielle déployé dans 12 usines",
+                  "Développement d'un algorithme de prédiction de maintenance qui a réduit les temps d'arrêt de 35%",
+                  "Publication de 2 articles techniques dans des revues spécialisées",
+                  "Obtention d'un brevet pour une méthode innovante de collecte et traitement de données IoT",
+                ]}
+                technologies={[
+                  "C++",
+                  "Python",
+                  "Embedded Systems",
+                  "IoT Protocols",
+                  "MQTT",
+                  "TensorFlow",
+                  "Edge Computing",
+                  "PCB Design",
+                ]}
+              />
+              <ExperienceCard
+                position="Lead Developer & Architecte Technique"
+                company="Cordon Electronics"
+                period="Janvier 2021 - Présent"
+                description="Direction technique d'une équipe de développeurs sur des projets d'envergure pour des clients industriels. Conception d'architectures logicielles évolutives et mise en place de méthodologies de développement agiles."
+                achievements={[
+                  "Conception et implémentation d'une architecture microservices qui a réduit les temps de déploiement de 70%",
+                  "Mise en place d'une CI/CD pipeline complète qui a amélioré la qualité du code et réduit les bugs en production de 45%",
+                  "Direction d'une équipe de 8 développeurs sur un projet critique pour un client du secteur énergétique",
+                  "Optimisation des performances d'une application existante, réduisant les temps de chargement de 60%",
+                ]}
+                technologies={[
+                  "React",
+                  "Node.js",
+                  "TypeScript",
+                  "Docker",
+                  "Kubernetes",
+                  "AWS",
+                  "MongoDB",
+                  "GraphQL",
+                  "CI/CD",
+                ]}
+              />
+
+              <ExperienceCard
+                position="Ingénieur Développement Full Stack"
+                company="DataSys Engineering"
+                period="2018 - 2021"
+                description="Conception et développement de solutions web pour l'analyse de données industrielles. Création d'interfaces utilisateur intuitives pour visualiser des données complexes et implémentation d'algorithmes d'optimisation."
+                achievements={[
+                  "Développement d'un tableau de bord analytique temps réel utilisé par plus de 500 ingénieurs",
+                  "Implémentation d'algorithmes d'optimisation qui ont permis d'économiser 1.2M€ annuels en coûts opérationnels",
+                  "Création d'une API RESTful consommée par plusieurs applications internes et externes",
+                  "Mise en place d'une architecture de traitement de données capable de gérer 10TB de données quotidiennes",
+                ]}
+                technologies={[
+                  "Python",
+                  "Django",
+                  "React",
+                  "PostgreSQL",
+                  "Redis",
+                  "AWS",
+                  "Docker",
+                  "Data Visualization",
+                  "Machine Learning",
+                ]}
               />
             </div>
           </div>
@@ -137,7 +227,7 @@ export default function Home() {
       </section>
 
       {/* Approche Section */}
-      <section className="bg-blue-900 py-20 text-white">
+      <section id="approche" className="bg-blue-900 py-20 text-white">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Mon <span className="text-blue-200">Approche d'Ingénieur</span>
@@ -207,7 +297,7 @@ export default function Home() {
         </div>
       </section>
 
-            {/* Compétences Section */}
+      {/* Compétences Section */}
       <section id="competences" className="bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
@@ -369,7 +459,7 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <span>benisjean.pro@gmail.com</span>
+                    <span>benisjean.pro@gmail.com</span> {/*Modif*/}
                   </div>
                   <div className="flex items-center">
                     <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-600">
@@ -398,7 +488,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <ContactForm />
+              <ContactForm /> {/*Modif*/}
             </div>
           </div>
         </div>
@@ -414,7 +504,7 @@ export default function Home() {
             </div>
             <div className="flex space-x-4">
               <a // Linkedin
-                href="https://www.linkedin.com/in/jean-b%C3%A9nis-1231951ab/"
+                href="https://www.linkedin.com/in/jean-b%C3%A9nis-1231951ab/" //Modif
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white transition-colors hover:bg-blue-600"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -422,7 +512,7 @@ export default function Home() {
                 </svg>
               </a>
               <a // GitHub
-                href="https://github.com/JeanBenis"
+                href="https://github.com/JeanBenis" //Modif
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white transition-colors hover:bg-blue-600"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -438,7 +528,7 @@ export default function Home() {
                 </svg>
               </a>
               <a // Facebook
-                href="https://www.facebook.com/jean.benis/"
+                href="https://www.facebook.com/profile.php?id=61575940063406&locale=fr_FR" //Modif
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white transition-colors hover:bg-blue-600"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">

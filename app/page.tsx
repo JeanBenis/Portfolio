@@ -1,4 +1,4 @@
-import { ArrowDown, Code, Database, Cpu, LineChart, BrainCircuit, Layers } from "lucide-react"
+import { ArrowDown, Code, Database, Cpu, LineChart, BrainCircuit, Layers, Check } from "lucide-react"
 import Image from "next/image"
 import ProjectCard from "@/components/project-card"
 import SkillCard from "@/components/skill-card"
@@ -10,6 +10,7 @@ import EducationCard from "@/components/education-card"
 import ExperienceCard from "@/components/experience-card"
 import ProcessTimeline from "@/components/process-timeline"
 import LanguageCard from "@/components/language-card"
+import PricingCard from "@/components/pricing-card"
 
 
 export default function Home() {
@@ -177,8 +178,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Expériences Professionnelles Section */}  {/*Modif*/}
-      <section id="experiences" className="py-20">
+      {/* Expériences Professionnelles Section */}
+      <section id="experiences" className="bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Mes <span className="text-blue-600">Expériences</span>
@@ -255,7 +256,7 @@ export default function Home() {
       </section>
 
       {/* Méthodologie Section avec Timeline */}
-      <section id="methodologie" className="bg-gray-50 py-20">
+      <section id="methodologie" className=" py-20">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Ma <span className="text-blue-600">Méthodologie</span>
@@ -446,6 +447,122 @@ export default function Home() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tarifs Section */} {/*Modif*/}
+      <section id="tarifs" className="bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Mes <span className="text-blue-600">Tarifs</span>
+          </h2>
+          <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-700">
+            Je propose différentes formules adaptées à vos besoins et à votre budget. Chaque projet étant unique,
+            n'hésitez pas à me contacter pour obtenir un devis personnalisé.
+          </p>
+
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <PricingCard
+              title="Site Vitrine"
+              price={1500}
+              description="Idéal pour les petites entreprises et les indépendants souhaitant établir leur présence en ligne."
+              features={[
+                { text: "Design responsive sur mesure", included: true },
+                { text: "Jusqu'à 5 pages", included: true },
+                { text: "Intégration des réseaux sociaux", included: true },
+                { text: "Formulaire de contact", included: true },
+                { text: "Optimisation SEO de base", included: true },
+                { text: "Hébergement et nom de domaine (1 an)", included: true },
+                { text: "Maintenance et support", included: false },
+                { text: "Fonctionnalités avancées", included: false },
+              ]}
+              buttonText="Demander un devis"
+              duration="projet"
+            />
+
+            <PricingCard
+              title="Application Web"
+              price={4500}
+              description="Solution complète pour les entreprises nécessitant des fonctionnalités personnalisées et avancées."
+              features={[
+                { text: "Architecture technique sur mesure", included: true },
+                { text: "Interface utilisateur intuitive", included: true },
+                { text: "Fonctionnalités interactives avancées", included: true },
+                { text: "Intégration avec vos systèmes existants", included: true },
+                { text: "Tableau de bord d'administration", included: true },
+                { text: "Optimisation des performances", included: true },
+                { text: "Tests et déploiement", included: true },
+                { text: "Formation à l'utilisation", included: true },
+              ]}
+              popular={true}
+              buttonText="Discuter de mon projet"
+              duration="projet"
+            />
+
+            <PricingCard
+              title="Maintenance & Support"
+              price={250}
+              description="Service continu pour assurer le bon fonctionnement et l'évolution de votre solution web."
+              features={[
+                { text: "Mises à jour de sécurité", included: true },
+                { text: "Corrections de bugs", included: true },
+                { text: "Sauvegardes régulières", included: true },
+                { text: "Surveillance des performances", included: true },
+                { text: "Support technique (10h/mois)", included: true },
+                { text: "Petites modifications et améliorations", included: true },
+                { text: "Rapport mensuel d'activité", included: true },
+                { text: "Développements majeurs", included: false },
+              ]}
+              buttonText="Souscrire"
+              duration="mois"
+            />
+          </div>
+
+          <div className="mt-16 text-center">
+            <h3 className="mb-6 text-2xl font-bold">Besoin d'une solution sur mesure ?</h3>
+            <div className="mx-auto max-w-3xl rounded-xl bg-white p-8 shadow-md">
+              <p className="mb-6 text-lg text-gray-700">
+                Pour les projets complexes ou spécifiques, je propose également des prestations sur mesure :
+              </p>
+              <ul className="mb-8 space-y-2 text-left">
+                <li className="flex items-start">
+                  <div className="mr-2 mt-1 text-blue-600">
+                    <Check className="h-4 w-4" />
+                  </div>
+                  <span>
+                    <strong>Conseil technique</strong> : 120€/heure
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <div className="mr-2 mt-1 text-blue-600">
+                    <Check className="h-4 w-4" />
+                  </div>
+                  <span>
+                    <strong>Développement spécifique</strong> : 90€/heure ou forfait selon projet
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <div className="mr-2 mt-1 text-blue-600">
+                    <Check className="h-4 w-4" />
+                  </div>
+                  <span>
+                    <strong>Audit technique</strong> : à partir de 800€
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <div className="mr-2 mt-1 text-blue-600">
+                    <Check className="h-4 w-4" />
+                  </div>
+                  <span>
+                    <strong>Formation</strong> : 650€/jour
+                  </span>
+                </li>
+              </ul>
+              <Button asChild className="bg-blue-600 hover:bg-blue-700">
+                <Link href="#contact">Demander un devis personnalisé</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
